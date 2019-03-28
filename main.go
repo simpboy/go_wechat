@@ -1,5 +1,9 @@
 package main
 // Go http server (I) 源码阅读: https://www.jianshu.com/p/8bf9a78635ba
+/**
+git remote set-url origin git://new.url.here
+git push -f origin master
+ */
 import (
 	"fmt"
 	"github.com/leeeboo/wechat/wx"
