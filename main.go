@@ -60,6 +60,7 @@ func main() {
 		MaxHeaderBytes: 0,
 	}
 
+	//http.HandleFunc();
 	log.Println(fmt.Sprintf("Listen: %d", port))
 	log.Fatal(server.ListenAndServe())
 }
