@@ -119,14 +119,20 @@ func (this *WeixinClient) text() {
 	reply.InitBaseData(this, "text")
 	reply.Content = value2CDATA(fmt.Sprintf("我收到的是：%s", inMsg))
 
+	log.Println("reply: ")
+	log.Println(reply)
 	replyXml, err := xml.Marshal(reply)
+	replyXmlString:=string(replyXml)
+	log.Println("replyXmlString:")
+	log.Println(replyXmlString)
 
 	if err != nil {
 		log.Println(err)
 		this.ResponseWriter.WriteHeader(403)
 		return
 	}
-
+	log.Println("replyXml:")
+	log.Println(replyXml)
 	this.ResponseWriter.Header().Set("Content-Type", "text/xml")
 	this.ResponseWriter.Write(replyXml)
 }

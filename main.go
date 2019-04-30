@@ -14,8 +14,8 @@ import (
 
 const (
 	logLevel = "dev"
-	port     = 8081
-	token    = "kosfe9rtue9r1"
+	port     = 80
+	token    = "bargamevzqbgoqmlq0txwifywrazaaa"
 )
 
 func get(w http.ResponseWriter, r *http.Request) {
@@ -46,7 +46,6 @@ func post(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(403)
 		return
 	}
-
 	client.Run()
 	return
 }
